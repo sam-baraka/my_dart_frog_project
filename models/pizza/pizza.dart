@@ -6,7 +6,7 @@ class Pizza {
   factory Pizza.fromJson(Map<String, dynamic> json) => _$PizzaFromJson(json);
   final String? name;
   final int? price;
-  final String? id;
+  final int? id;
   final String? image;
   final String? description;
   Map<String, dynamic> toJson() => _$PizzaModelToJson(this);
@@ -18,7 +18,7 @@ Pizza _$PizzaFromJson(Map<String, dynamic> json) {
     price: json['price'] as int?,
     image: json['image'] as String?,
     description: json['description'] as String?,
-    id: json['id'] as String?,
+    id: json['id'] as int?,
   );
 }
 
@@ -29,3 +29,4 @@ Map<String, dynamic> _$PizzaModelToJson(Pizza instance) => <String, dynamic>{
       'description': instance.description,
       'id': instance.id
     };
+    
